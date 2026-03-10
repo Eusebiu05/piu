@@ -1,0 +1,14 @@
+C:\Users\Work\Desktop\FIESC\An 2\Semestru 2\Proietare interfețe utilizator\Laborator\Laborator 2\Laborator 2\bin\Debug\net9.0\Laborator 2.exe
+C:\Users\Work\Desktop\FIESC\An 2\Semestru 2\Proietare interfețe utilizator\Laborator\Laborator 2\Laborator 2\bin\Debug\net9.0\Laborator 2.deps.json
+C:\Users\Work\Desktop\FIESC\An 2\Semestru 2\Proietare interfețe utilizator\Laborator\Laborator 2\Laborator 2\bin\Debug\net9.0\Laborator 2.runtimeconfig.json
+C:\Users\Work\Desktop\FIESC\An 2\Semestru 2\Proietare interfețe utilizator\Laborator\Laborator 2\Laborator 2\bin\Debug\net9.0\Laborator 2.dll
+C:\Users\Work\Desktop\FIESC\An 2\Semestru 2\Proietare interfețe utilizator\Laborator\Laborator 2\Laborator 2\bin\Debug\net9.0\Laborator 2.pdb
+C:\Users\Work\Desktop\FIESC\An 2\Semestru 2\Proietare interfețe utilizator\Laborator\Laborator 2\Laborator 2\obj\Debug\net9.0\Laborator 2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Work\Desktop\FIESC\An 2\Semestru 2\Proietare interfețe utilizator\Laborator\Laborator 2\Laborator 2\obj\Debug\net9.0\Laborator 2.AssemblyInfoInputs.cache
+C:\Users\Work\Desktop\FIESC\An 2\Semestru 2\Proietare interfețe utilizator\Laborator\Laborator 2\Laborator 2\obj\Debug\net9.0\Laborator 2.AssemblyInfo.cs
+C:\Users\Work\Desktop\FIESC\An 2\Semestru 2\Proietare interfețe utilizator\Laborator\Laborator 2\Laborator 2\obj\Debug\net9.0\Laborator 2.csproj.CoreCompileInputs.cache
+C:\Users\Work\Desktop\FIESC\An 2\Semestru 2\Proietare interfețe utilizator\Laborator\Laborator 2\Laborator 2\obj\Debug\net9.0\Laborator 2.dll
+C:\Users\Work\Desktop\FIESC\An 2\Semestru 2\Proietare interfețe utilizator\Laborator\Laborator 2\Laborator 2\obj\Debug\net9.0\refint\Laborator 2.dll
+C:\Users\Work\Desktop\FIESC\An 2\Semestru 2\Proietare interfețe utilizator\Laborator\Laborator 2\Laborator 2\obj\Debug\net9.0\Laborator 2.pdb
+C:\Users\Work\Desktop\FIESC\An 2\Semestru 2\Proietare interfețe utilizator\Laborator\Laborator 2\Laborator 2\obj\Debug\net9.0\Laborator 2.genruntimeconfig.cache
+C:\Users\Work\Desktop\FIESC\An 2\Semestru 2\Proietare interfețe utilizator\Laborator\Laborator 2\Laborator 2\obj\Debug\net9.0\ref\Laborator 2.dll
