@@ -6,5 +6,6 @@ namespace NivelStocareDate
     {
         void AddMasina(Masina masina);
         List<Masina> GetMasini();
+        bool ModificaMasina(Masina masinaActualizata);
     }
 }

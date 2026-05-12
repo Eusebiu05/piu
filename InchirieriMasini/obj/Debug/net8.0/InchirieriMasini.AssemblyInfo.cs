@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("InchirieriMasini")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f1e2627672cb1e26baaa07ba8b6b61c8b2cf0db3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c0130add42a88d4a4ec3348e8a505e8470241ff6")]
 [assembly: System.Reflection.AssemblyProductAttribute("InchirieriMasini")]
 [assembly: System.Reflection.AssemblyTitleAttribute("InchirieriMasini")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

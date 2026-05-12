@@ -14,16 +14,12 @@ namespace NivelUIWPF
         private readonly IStocareMasini adminMasini;
 
         private const int DATE_VALIDE = 0;
-
         private const int EROARE_MARCA_GOALA = 1;
         private const int EROARE_MARCA_LUNGA = 2;
-
         private const int EROARE_MODEL_GOL = 4;
         private const int EROARE_MODEL_LUNG = 8;
-
         private const int EROARE_NUMAR_GOL = 16;
         private const int EROARE_NUMAR_LUNG = 32;
-
         private const int EROARE_AN_INVALID = 64;
         private const int EROARE_PRET_INVALID = 128;
 
@@ -34,20 +30,82 @@ namespace NivelUIWPF
         private readonly Brush culoareEroare = Brushes.OrangeRed;
         private readonly Brush culoareBorderNormala = new SolidColorBrush(Color.FromRgb(102, 102, 138));
 
+        private readonly List<string> tipuriCarburant = new List<string>
+        {
+            "Benzină",
+            "Diesel",
+            "Hibrid",
+            "Electric"
+        };
+
+        private readonly List<string> dotariDisponibile = new List<string>
+        {
+            "AC",
+            "Navigație",
+            "Bluetooth",
+            "Cameră",
+            "Scaune încălzite"
+        };
+
         public MainWindow()
         {
             InitializeComponent();
 
             adminMasini = new AdministrareMasiniFisierText("Masini.txt");
 
+            InitializeazaControaleLab09();
             ReseteazaErori();
             AfiseazaToateMasinile();
+        }
+
+        private void InitializeazaControaleLab09()
+        {
+            lstTipCarburant.ItemsSource = tipuriCarburant;
+            lstTipCarburant.SelectedIndex = 1;
+
+            lstDotariModificare.ItemsSource = dotariDisponibile;
+
+            dpDataInmatriculare.SelectedDate = DateTime.Today;
+            dpDataInmatriculareModificare.SelectedDate = DateTime.Today;
+
+            ActualizeazaComboMasini();
+        }
+
+        private void BtnMeniuAdmin_Click(object sender, RoutedEventArgs e)
+        {
+            panelAdministrare.Visibility = Visibility.Visible;
+            panelCautare.Visibility = Visibility.Collapsed;
+            panelModificare.Visibility = Visibility.Collapsed;
+
+            lblMesajCautare.Content = string.Empty;
+            AfiseazaToateMasinile();
+        }
+
+        private void BtnMeniuModifica_Click(object sender, RoutedEventArgs e)
+        {
+            panelAdministrare.Visibility = Visibility.Collapsed;
+            panelCautare.Visibility = Visibility.Collapsed;
+            panelModificare.Visibility = Visibility.Visible;
+
+            ActualizeazaComboMasini();
+
+            lblTitluLista.Content = "Modificare mașină";
+            lblStatus.Content = "Status: alege o mașină din ComboBox pentru modificare.";
+        }
+
+        private void BtnMeniuCauta_Click(object sender, RoutedEventArgs e)
+        {
+            panelAdministrare.Visibility = Visibility.Collapsed;
+            panelCautare.Visibility = Visibility.Visible;
+            panelModificare.Visibility = Visibility.Collapsed;
+
+            lblTitluLista.Content = "Rezultate căutare";
+            lblStatus.Content = "Status: introdu textul de căutare.";
         }
 
         private void BtnAdauga_Click(object sender, RoutedEventArgs e)
         {
             int codEroare = ValideazaDateMasina();
-
             AfiseazaErori(codEroare);
 
             if (codEroare != DATE_VALIDE)
@@ -66,7 +124,11 @@ namespace NivelUIWPF
                 NumarInmatriculare = txtNumar.Text.Trim(),
                 AnFabricatie = anFabricatie,
                 PretPeZi = pretPeZi,
-                Disponibila = true
+                Disponibila = rbDisponibila.IsChecked == true,
+                Dotari = GetDotariSelectate(),
+                TipCarburant = GetTipCarburantSelectat(),
+                DataInmatriculare = dpDataInmatriculare.SelectedDate ?? DateTime.Today,
+                DataActualizare = DateTime.Today
             };
 
             adminMasini.AddMasina(masina);
@@ -74,6 +136,7 @@ namespace NivelUIWPF
             CurataCampuri();
             ReseteazaErori();
             AfiseazaToateMasinile();
+            ActualizeazaComboMasini();
 
             lblStatus.Content = "Status: mașina a fost adăugată cu succes.";
         }
@@ -101,6 +164,160 @@ namespace NivelUIWPF
 
             lblTitluLista.Content = "Mașini disponibile";
             lblStatus.Content = $"Status: {masiniDisponibile.Count} mașini disponibile.";
+        }
+
+        private void BtnCauta_Click(object sender, RoutedEventArgs e)
+        {
+            string textCautat = txtCautare.Text.Trim().ToLower();
+
+            if (string.IsNullOrWhiteSpace(textCautat))
+            {
+                lblMesajCautare.Content = "Introdu un text pentru căutare.";
+                dgMasini.ItemsSource = null;
+                lblStatus.Content = "Status: căutare invalidă.";
+                return;
+            }
+
+            List<Masina> rezultate = adminMasini.GetMasini()
+                .Where(m =>
+                    m.Marca.ToLower().Contains(textCautat) ||
+                    m.Model.ToLower().Contains(textCautat) ||
+                    m.NumarInmatriculare.ToLower().Contains(textCautat))
+                .ToList();
+
+            AfiseazaLista(rezultate);
+
+            lblTitluLista.Content = "Rezultate căutare";
+
+            if (rezultate.Count == 0)
+            {
+                lblMesajCautare.Content = "Nu a fost găsită nicio mașină.";
+                lblStatus.Content = "Status: 0 rezultate.";
+            }
+            else
+            {
+                lblMesajCautare.Content = string.Empty;
+                lblStatus.Content = $"Status: {rezultate.Count} rezultate găsite.";
+            }
+        }
+
+        private void BtnResetCautare_Click(object sender, RoutedEventArgs e)
+        {
+            txtCautare.Clear();
+            lblMesajCautare.Content = string.Empty;
+            AfiseazaToateMasinile();
+        }
+
+        private void ActualizeazaComboMasini()
+        {
+            List<Masina> masini = adminMasini.GetMasini();
+
+            cmbMasiniModificare.ItemsSource = null;
+            cmbMasiniModificare.ItemsSource = masini;
+        }
+
+        private void CmbMasiniModificare_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (cmbMasiniModificare.SelectedItem is not Masina masina)
+            {
+                return;
+            }
+
+            txtPretModificare.Text = masina.PretPeZi.ToString();
+
+            dpDataInmatriculareModificare.SelectedDate = masina.DataInmatriculare;
+
+            rbModDisponibila.IsChecked = masina.Disponibila;
+            rbModIndisponibila.IsChecked = !masina.Disponibila;
+
+            lstDotariModificare.SelectedItems.Clear();
+
+            foreach (string dotare in dotariDisponibile)
+            {
+                if (masina.Dotari.Contains(dotare))
+                {
+                    lstDotariModificare.SelectedItems.Add(dotare);
+                }
+            }
+        }
+
+        private void BtnActualizeaza_Click(object sender, RoutedEventArgs e)
+        {
+            if (cmbMasiniModificare.SelectedItem is not Masina masina)
+            {
+                lblStatus.Content = "Status: selectează o mașină pentru modificare.";
+                return;
+            }
+
+            if (!decimal.TryParse(txtPretModificare.Text.Trim(), out decimal pretNou) || pretNou <= 0)
+            {
+                lblStatus.Content = "Status: prețul introdus nu este valid.";
+                return;
+            }
+
+            masina.PretPeZi = pretNou;
+            masina.Disponibila = rbModDisponibila.IsChecked == true;
+            masina.DataInmatriculare = dpDataInmatriculareModificare.SelectedDate ?? DateTime.Today;
+            masina.DataActualizare = DateTime.Today;
+
+            masina.Dotari = lstDotariModificare.SelectedItems
+                .Cast<string>()
+                .ToList();
+
+            bool modificat = adminMasini.ModificaMasina(masina);
+
+            if (modificat)
+            {
+                AfiseazaToateMasinile();
+                ActualizeazaComboMasini();
+                lblStatus.Content = "Status: mașina a fost actualizată cu succes.";
+            }
+            else
+            {
+                lblStatus.Content = "Status: mașina nu a fost găsită în fișier.";
+            }
+        }
+
+        private List<string> GetDotariSelectate()
+        {
+            List<string> dotari = new List<string>();
+
+            if (ckbAC.IsChecked == true)
+            {
+                dotari.Add("AC");
+            }
+
+            if (ckbNavigatie.IsChecked == true)
+            {
+                dotari.Add("Navigație");
+            }
+
+            if (ckbBluetooth.IsChecked == true)
+            {
+                dotari.Add("Bluetooth");
+            }
+
+            if (ckbCamera.IsChecked == true)
+            {
+                dotari.Add("Cameră");
+            }
+
+            if (ckbIncalzire.IsChecked == true)
+            {
+                dotari.Add("Scaune încălzite");
+            }
+
+            return dotari;
+        }
+
+        private string GetTipCarburantSelectat()
+        {
+            if (lstTipCarburant.SelectedItem is string tip)
+            {
+                return tip;
+            }
+
+            return "Diesel";
         }
 
         private int ValideazaDateMasina()
@@ -147,8 +364,7 @@ namespace NivelUIWPF
                 codEroare |= EROARE_AN_INVALID;
             }
 
-            if (!decimal.TryParse(pretText, out decimal pretPeZi) ||
-                pretPeZi <= 0)
+            if (!decimal.TryParse(pretText, out decimal pretPeZi) || pretPeZi <= 0)
             {
                 codEroare |= EROARE_PRET_INVALID;
             }
@@ -214,7 +430,6 @@ namespace NivelUIWPF
             label.Foreground = culoareEroare;
             textBox.BorderBrush = culoareEroare;
             textBox.BorderThickness = new Thickness(2);
-
             textBlock.Text = mesaj;
             textBlock.Visibility = Visibility.Visible;
         }
@@ -252,6 +467,27 @@ namespace NivelUIWPF
             textBlock.Visibility = Visibility.Collapsed;
         }
 
+        private void CurataCampuri()
+        {
+            txtMarca.Clear();
+            txtModel.Clear();
+            txtNumar.Clear();
+            txtAn.Clear();
+            txtPret.Clear();
+
+            rbDisponibila.IsChecked = true;
+            rbIndisponibila.IsChecked = false;
+
+            ckbAC.IsChecked = false;
+            ckbNavigatie.IsChecked = false;
+            ckbBluetooth.IsChecked = false;
+            ckbCamera.IsChecked = false;
+            ckbIncalzire.IsChecked = false;
+
+            lstTipCarburant.SelectedIndex = 1;
+            dpDataInmatriculare.SelectedDate = DateTime.Today;
+        }
+
         private void AfiseazaToateMasinile()
         {
             List<Masina> masini = adminMasini.GetMasini();
@@ -273,15 +509,6 @@ namespace NivelUIWPF
             }
 
             dgMasini.ItemsSource = masini;
-        }
-
-        private void CurataCampuri()
-        {
-            txtMarca.Clear();
-            txtModel.Clear();
-            txtNumar.Clear();
-            txtAn.Clear();
-            txtPret.Clear();
         }
     }
 }

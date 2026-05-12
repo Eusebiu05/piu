@@ -7,7 +7,7 @@ namespace NivelStocareDate
         private const int ID_PRIMA_MASINA = 1;
         private const int INCREMENT = 1;
 
-        private string numeFisier;
+        private readonly string numeFisier;
 
         public AdministrareMasiniFisierText(string numeFisier)
         {
@@ -33,15 +33,43 @@ namespace NivelStocareDate
 
             using (StreamReader sr = new StreamReader(numeFisier))
             {
-                string linieFisier;
+                string? linieFisier;
 
                 while ((linieFisier = sr.ReadLine()) != null)
                 {
-                    masini.Add(new Masina(linieFisier));
+                    if (!string.IsNullOrWhiteSpace(linieFisier))
+                    {
+                        masini.Add(new Masina(linieFisier));
+                    }
                 }
             }
 
             return masini;
+        }
+
+        public bool ModificaMasina(Masina masinaActualizata)
+        {
+            List<Masina> masini = GetMasini();
+
+            int index = masini.FindIndex(m => m.IdMasina == masinaActualizata.IdMasina);
+
+            if (index == -1)
+            {
+                return false;
+            }
+
+            masinaActualizata.DataActualizare = DateTime.Today;
+            masini[index] = masinaActualizata;
+
+            using (StreamWriter sw = new StreamWriter(numeFisier, false))
+            {
+                foreach (Masina masina in masini)
+                {
+                    sw.WriteLine(masina.ConversieLaSirPentruFisier());
+                }
+            }
+
+            return true;
         }
 
         private int GetNextIdMasina()

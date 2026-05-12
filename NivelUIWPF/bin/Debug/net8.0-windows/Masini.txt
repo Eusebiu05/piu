@@ -1,2 +1,4 @@
-1;Skoda;Octavia;IS23EUS;2014;250;True
-2;Dacia;Logan;B777AAH;2025;120;True
+1;Skoda;Octavia;IS23EUS;2014;250;True;;Diesel;5/12/2026;5/12/2026
+2;Dacia;Logan;B777AAH;2025;120;True;AC;Diesel;5/12/2026;5/12/2026
+3;BMW;F30;IS77EDF;2018;550;True;AC,Navigație,Bluetooth,Cameră,Scaune încălzite;Diesel;5/12/2026;5/12/2026
+4;BMW;E90;SV79RIK;2012;130;True;AC,Bluetooth,Scaune încălzite;Diesel;5/12/2026;5/12/2026
