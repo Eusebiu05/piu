@@ -10,16 +10,20 @@
         Background="#1E1E2F">
 
     <Window.Resources>
+        <SolidColorBrush x:Key="CuloareFundal" Color="#1E1E2F"/>
         <SolidColorBrush x:Key="CuloareCard" Color="#2D2D44"/>
+        <SolidColorBrush x:Key="CuloareLista" Color="#3B3B58"/>
         <SolidColorBrush x:Key="CuloareText" Color="#F5F6FA"/>
         <SolidColorBrush x:Key="CuloareAccent" Color="#F1C40F"/>
         <SolidColorBrush x:Key="CuloareInput" Color="#3B3B58"/>
+        <SolidColorBrush x:Key="CuloareBorder" Color="#66668A"/>
+        <SolidColorBrush x:Key="CuloareEroare" Color="#FF6B6B"/>
 
         <Style TargetType="Label">
             <Setter Property="FontFamily" Value="Segoe UI"/>
             <Setter Property="FontSize" Value="15"/>
             <Setter Property="Foreground" Value="{StaticResource CuloareText}"/>
-            <Setter Property="Margin" Value="0,6,0,2"/>
+            <Setter Property="Margin" Value="0,5,0,2"/>
         </Style>
 
         <Style TargetType="TextBox">
@@ -27,10 +31,12 @@
             <Setter Property="FontSize" Value="15"/>
             <Setter Property="Height" Value="32"/>
             <Setter Property="Padding" Value="8,4"/>
-            <Setter Property="Margin" Value="0,0,0,6"/>
+            <Setter Property="Margin" Value="0,0,0,2"/>
             <Setter Property="Background" Value="{StaticResource CuloareInput}"/>
             <Setter Property="Foreground" Value="{StaticResource CuloareText}"/>
-            <Setter Property="BorderBrush" Value="#66668A"/>
+            <Setter Property="BorderBrush" Value="{StaticResource CuloareBorder}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
         </Style>
 
         <Style TargetType="Button">
@@ -41,83 +47,199 @@
             <Setter Property="Margin" Value="0,8,0,0"/>
             <Setter Property="Background" Value="{StaticResource CuloareAccent}"/>
             <Setter Property="Foreground" Value="#1E1E2F"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Cursor" Value="Hand"/>
+        </Style>
+
+        <Style x:Key="EroareTextBlockStyle" TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="Foreground" Value="{StaticResource CuloareEroare}"/>
+            <Setter Property="Margin" Value="0,0,0,3"/>
+            <Setter Property="Visibility" Value="Collapsed"/>
         </Style>
     </Window.Resources>
 
     <Grid Margin="40">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="380"/>
+            <ColumnDefinition Width="390"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
+        <!-- FORMULAR ADAUGARE MASINA -->
         <Border Grid.Column="0"
                 Background="{StaticResource CuloareCard}"
                 CornerRadius="20"
-                Padding="30"
+                Padding="26"
                 Margin="0,0,25,0">
 
-            <StackPanel>
-                <Label Content="Adaugă mașină"
-                       FontSize="30"
-                       FontWeight="Bold"
-                       Foreground="{StaticResource CuloareAccent}"
-                       HorizontalContentAlignment="Center"
-                       Margin="0,0,0,20"/>
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <StackPanel>
 
-                <Label Content="Marca"/>
-                <TextBox x:Name="txtMarca"/>
+                    <Label Content="Adaugă mașină"
+                           FontSize="30"
+                           FontWeight="Bold"
+                           Foreground="{StaticResource CuloareAccent}"
+                           HorizontalContentAlignment="Center"
+                           Margin="0,0,0,20"/>
 
-                <Label Content="Model"/>
-                <TextBox x:Name="txtModel"/>
+                    <Label x:Name="lblMarcaInput"
+                           Content="Marca:"
+                           Target="{Binding ElementName=txtMarca}"/>
+                    <TextBox x:Name="txtMarca"/>
+                    <TextBlock x:Name="tbErrMarca"
+                               Style="{StaticResource EroareTextBlockStyle}"/>
 
-                <Label Content="Număr înmatriculare"/>
-                <TextBox x:Name="txtNumar"/>
+                    <Label x:Name="lblModelInput"
+                           Content="Model:"
+                           Target="{Binding ElementName=txtModel}"/>
+                    <TextBox x:Name="txtModel"/>
+                    <TextBlock x:Name="tbErrModel"
+                               Style="{StaticResource EroareTextBlockStyle}"/>
 
-                <Label Content="An fabricație"/>
-                <TextBox x:Name="txtAn"/>
+                    <Label x:Name="lblNumarInput"
+                           Content="Număr înmatriculare:"
+                           Target="{Binding ElementName=txtNumar}"/>
+                    <TextBox x:Name="txtNumar"/>
+                    <TextBlock x:Name="tbErrNumar"
+                               Style="{StaticResource EroareTextBlockStyle}"/>
 
-                <Label Content="Preț pe zi"/>
-                <TextBox x:Name="txtPret"/>
+                    <Label x:Name="lblAnInput"
+                           Content="An fabricație:"
+                           Target="{Binding ElementName=txtAn}"/>
+                    <TextBox x:Name="txtAn"/>
+                    <TextBlock x:Name="tbErrAn"
+                               Style="{StaticResource EroareTextBlockStyle}"/>
 
-                <Button Content="Adaugă mașina"
-                        Click="BtnAdauga_Click"/>
+                    <Label x:Name="lblPretInput"
+                           Content="Preț pe zi:"
+                           Target="{Binding ElementName=txtPret}"/>
+                    <TextBox x:Name="txtPret"/>
+                    <TextBlock x:Name="tbErrPret"
+                               Style="{StaticResource EroareTextBlockStyle}"/>
 
-                <Button Content="Afișează toate mașinile"
-                        Click="BtnAfiseazaToate_Click"/>
+                    <Button Content="Adaugă mașina"
+                            Click="BtnAdauga_Click"/>
 
-                <Button Content="Afișează mașinile disponibile"
-                        Click="BtnAfiseazaDisponibile_Click"/>
-            </StackPanel>
+                    <Button Content="Reset"
+                            Click="BtnReset_Click"/>
+
+                    <Button Content="Afișează toate mașinile"
+                            Click="BtnAfiseazaToate_Click"/>
+
+                    <Button Content="Afișează mașinile disponibile"
+                            Click="BtnAfiseazaDisponibile_Click"/>
+
+                </StackPanel>
+            </ScrollViewer>
         </Border>
 
+        <!-- LISTA MASINI -->
+        <!-- LISTA MASINI -->
         <Border Grid.Column="1"
-                Background="{StaticResource CuloareCard}"
-                CornerRadius="20"
-                Padding="30">
+        Background="{StaticResource CuloareCard}"
+        CornerRadius="20"
+        Padding="30">
 
-            <StackPanel>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
                 <Label x:Name="lblTitluLista"
-                       Content="Lista mașinilor"
-                       FontSize="30"
-                       FontWeight="Bold"
-                       Foreground="{StaticResource CuloareAccent}"
-                       HorizontalContentAlignment="Center"
-                       Margin="0,0,0,20"/>
+               Grid.Row="0"
+               Content="Lista tuturor mașinilor"
+               FontSize="30"
+               FontWeight="Bold"
+               Foreground="{StaticResource CuloareAccent}"
+               HorizontalContentAlignment="Center"
+               Margin="0,0,0,20"/>
 
-                <ListBox x:Name="lstMasini"
-                         FontFamily="Segoe UI"
-                         FontSize="16"
-                         Background="#3B3B58"
-                         Foreground="{StaticResource CuloareText}"
-                         BorderBrush="#66668A"
-                         Height="420"/>
+                <DataGrid x:Name="dgMasini"
+                  Grid.Row="1"
+                  AutoGenerateColumns="False"
+                  IsReadOnly="True"
+                  CanUserAddRows="False"
+                  CanUserDeleteRows="False"
+                  HeadersVisibility="Column"
+                  GridLinesVisibility="None"
+                  RowHeight="42"
+                  FontFamily="Segoe UI"
+                  FontSize="15"
+                  Background="#3B3B58"
+                  Foreground="{StaticResource CuloareText}"
+                  BorderBrush="{StaticResource CuloareBorder}"
+                  HorizontalGridLinesBrush="#555575"
+                  VerticalGridLinesBrush="#555575"
+                  AlternatingRowBackground="#343450"
+                  RowBackground="#3B3B58"
+                  SelectionMode="Single"
+                  SelectionUnit="FullRow"
+                  Margin="0">
+
+                    <DataGrid.ColumnHeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="Background" Value="#25253A"/>
+                            <Setter Property="Foreground" Value="#F1C40F"/>
+                            <Setter Property="FontWeight" Value="Bold"/>
+                            <Setter Property="FontSize" Value="15"/>
+                            <Setter Property="Padding" Value="10"/>
+                            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                            <Setter Property="BorderBrush" Value="#555575"/>
+                            <Setter Property="BorderThickness" Value="0,0,1,1"/>
+                        </Style>
+                    </DataGrid.ColumnHeaderStyle>
+
+                    <DataGrid.CellStyle>
+                        <Style TargetType="DataGridCell">
+                            <Setter Property="Padding" Value="8"/>
+                            <Setter Property="BorderThickness" Value="0"/>
+                            <Setter Property="VerticalContentAlignment" Value="Center"/>
+                            <Setter Property="Foreground" Value="{StaticResource CuloareText}"/>
+                            <Setter Property="Background" Value="Transparent"/>
+                        </Style>
+                    </DataGrid.CellStyle>
+
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="ID"
+                                    Binding="{Binding IdMasina}"
+                                    Width="60"/>
+
+                        <DataGridTextColumn Header="Marcă"
+                                    Binding="{Binding Marca}"
+                                    Width="*"/>
+
+                        <DataGridTextColumn Header="Model"
+                                    Binding="{Binding Model}"
+                                    Width="*"/>
+
+                        <DataGridTextColumn Header="Nr. înmatriculare"
+                                    Binding="{Binding NumarInmatriculare}"
+                                    Width="160"/>
+
+                        <DataGridTextColumn Header="An"
+                                    Binding="{Binding AnFabricatie}"
+                                    Width="90"/>
+
+                        <DataGridTextColumn Header="Preț / zi"
+                                    Binding="{Binding PretPeZi}"
+                                    Width="110"/>
+
+                        <DataGridCheckBoxColumn Header="Disponibilă"
+                                        Binding="{Binding Disponibila}"
+                                        Width="120"/>
+                    </DataGrid.Columns>
+                </DataGrid>
 
                 <Label x:Name="lblStatus"
-                       Content="Status: aplicația este pregătită."
-                       FontStyle="Italic"
-                       Foreground="{StaticResource CuloareText}"
-                       Margin="0,15,0,0"/>
-            </StackPanel>
+               Grid.Row="2"
+               Content="Status: aplicația este pregătită."
+               FontStyle="Italic"
+               Foreground="{StaticResource CuloareText}"
+               Margin="0,15,0,0"/>
+            </Grid>
         </Border>
     </Grid>
 </Window>

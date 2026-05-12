@@ -1,1 +1,2 @@
 1;Skoda;Octavia;IS23EUS;2014;250;True
+2;Dacia;Logan;B777AAH;2025;120;True
