@@ -1,0 +1,105 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Proiecte Bussines\\Traduceri Urgente SRL\\LexiSync\\InchirieriMasini\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A536421E-5500-4FCC-A5E8-8323E86BDA70}|InchirieriMasini\\InchirieriMasini.csproj|d:\\proiecte bussines\\traduceri urgente srl\\lexisync\\inchirierimasini\\inchirierimasini\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A536421E-5500-4FCC-A5E8-8323E86BDA70}|InchirieriMasini\\InchirieriMasini.csproj|solutionrelative:inchirierimasini\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A536421E-5500-4FCC-A5E8-8323E86BDA70}|InchirieriMasini\\InchirieriMasini.csproj|d:\\proiecte bussines\\traduceri urgente srl\\lexisync\\inchirierimasini\\inchirierimasini\\inchirierimasini.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{A536421E-5500-4FCC-A5E8-8323E86BDA70}|InchirieriMasini\\InchirieriMasini.csproj|solutionrelative:inchirierimasini\\inchirierimasini.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FF558DA-351D-476E-9EF7-E52082FFB577}|NivelStocareDate\\NivelStocareDate.csproj|d:\\proiecte bussines\\traduceri urgente srl\\lexisync\\inchirierimasini\\nivelstocaredate\\administraremasinifisiertext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FF558DA-351D-476E-9EF7-E52082FFB577}|NivelStocareDate\\NivelStocareDate.csproj|solutionrelative:nivelstocaredate\\administraremasinifisiertext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68B8BA1A-802C-4C6A-8CE1-E4416E0D55A1}|LibrarieModele\\LibrarieModele.csproj|d:\\proiecte bussines\\traduceri urgente srl\\lexisync\\inchirierimasini\\librariemodele\\masina.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68B8BA1A-802C-4C6A-8CE1-E4416E0D55A1}|LibrarieModele\\LibrarieModele.csproj|solutionrelative:librariemodele\\masina.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FF558DA-351D-476E-9EF7-E52082FFB577}|NivelStocareDate\\NivelStocareDate.csproj|d:\\proiecte bussines\\traduceri urgente srl\\lexisync\\inchirierimasini\\nivelstocaredate\\istocaremasini.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FF558DA-351D-476E-9EF7-E52082FFB577}|NivelStocareDate\\NivelStocareDate.csproj|solutionrelative:nivelstocaredate\\istocaremasini.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "InchirieriMasini",
+              "DocumentMoniker": "D:\\Proiecte Bussines\\Traduceri Urgente SRL\\LexiSync\\InchirieriMasini\\InchirieriMasini\\InchirieriMasini.csproj",
+              "RelativeDocumentMoniker": "InchirieriMasini\\InchirieriMasini.csproj",
+              "ToolTip": "D:\\Proiecte Bussines\\Traduceri Urgente SRL\\LexiSync\\InchirieriMasini\\InchirieriMasini\\InchirieriMasini.csproj",
+              "RelativeToolTip": "InchirieriMasini\\InchirieriMasini.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-05-12T19:12:02.104Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AdministrareMasiniFisierText.cs",
+              "DocumentMoniker": "D:\\Proiecte Bussines\\Traduceri Urgente SRL\\LexiSync\\InchirieriMasini\\NivelStocareDate\\AdministrareMasiniFisierText.cs",
+              "RelativeDocumentMoniker": "NivelStocareDate\\AdministrareMasiniFisierText.cs",
+              "ToolTip": "D:\\Proiecte Bussines\\Traduceri Urgente SRL\\LexiSync\\InchirieriMasini\\NivelStocareDate\\AdministrareMasiniFisierText.cs",
+              "RelativeToolTip": "NivelStocareDate\\AdministrareMasiniFisierText.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAAADEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T19:06:23.226Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IStocareMasini.cs",
+              "DocumentMoniker": "D:\\Proiecte Bussines\\Traduceri Urgente SRL\\LexiSync\\InchirieriMasini\\NivelStocareDate\\IStocareMasini.cs",
+              "RelativeDocumentMoniker": "NivelStocareDate\\IStocareMasini.cs",
+              "ToolTip": "D:\\Proiecte Bussines\\Traduceri Urgente SRL\\LexiSync\\InchirieriMasini\\NivelStocareDate\\IStocareMasini.cs",
+              "RelativeToolTip": "NivelStocareDate\\IStocareMasini.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T19:01:35.98Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Masina.cs",
+              "DocumentMoniker": "D:\\Proiecte Bussines\\Traduceri Urgente SRL\\LexiSync\\InchirieriMasini\\LibrarieModele\\Masina.cs",
+              "RelativeDocumentMoniker": "LibrarieModele\\Masina.cs",
+              "ToolTip": "D:\\Proiecte Bussines\\Traduceri Urgente SRL\\LexiSync\\InchirieriMasini\\LibrarieModele\\Masina.cs",
+              "RelativeToolTip": "LibrarieModele\\Masina.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAAADUAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T18:33:57.04Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Proiecte Bussines\\Traduceri Urgente SRL\\LexiSync\\InchirieriMasini\\InchirieriMasini\\Program.cs",
+              "RelativeDocumentMoniker": "InchirieriMasini\\Program.cs",
+              "ToolTip": "D:\\Proiecte Bussines\\Traduceri Urgente SRL\\LexiSync\\InchirieriMasini\\InchirieriMasini\\Program.cs",
+              "RelativeToolTip": "InchirieriMasini\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T18:24:34.952Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
