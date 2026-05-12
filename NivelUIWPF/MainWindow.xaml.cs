@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
@@ -9,9 +12,40 @@ using NivelStocareDate;
 
 namespace NivelUIWPF
 {
-    public partial class MainWindow : Window
+    public partial class MainWindow : Window, INotifyPropertyChanged
     {
         private readonly IStocareMasini adminMasini;
+
+        public event PropertyChangedEventHandler? PropertyChanged;
+
+        protected void OnPropertyChanged([CallerMemberName] string? propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        private ObservableCollection<Masina> masini = new ObservableCollection<Masina>();
+
+        public ObservableCollection<Masina> Masini
+        {
+            get => masini;
+            set
+            {
+                masini = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private Masina? masinaSelectata;
+
+        public Masina? MasinaSelectata
+        {
+            get => masinaSelectata;
+            set
+            {
+                masinaSelectata = value;
+                OnPropertyChanged();
+            }
+        }
 
         private const int DATE_VALIDE = 0;
         private const int EROARE_MARCA_GOALA = 1;
@@ -53,9 +87,11 @@ namespace NivelUIWPF
 
             adminMasini = new AdministrareMasiniFisierText("Masini.txt");
 
+            DataContext = this;
+
             InitializeazaControaleLab09();
             ReseteazaErori();
-            AfiseazaToateMasinile();
+            IncarcaMasiniInObservableCollection();
         }
 
         private void InitializeazaControaleLab09()
@@ -69,6 +105,39 @@ namespace NivelUIWPF
             dpDataInmatriculareModificare.SelectedDate = DateTime.Today;
 
             ActualizeazaComboMasini();
+        }
+
+        private void IncarcaMasiniInObservableCollection()
+        {
+            Masini.Clear();
+
+            foreach (Masina masina in adminMasini.GetMasini())
+            {
+                Masini.Add(masina);
+            }
+
+            lblTitluLista.Content = "Lista tuturor mașinilor";
+            lblStatus.Content = $"Status: {Masini.Count} mașini salvate.";
+        }
+
+        private void AfiseazaToateMasinile()
+        {
+            IncarcaMasiniInObservableCollection();
+        }
+
+        private void AfiseazaLista(List<Masina> listaMasini)
+        {
+            Masini.Clear();
+
+            foreach (Masina masina in listaMasini)
+            {
+                Masini.Add(masina);
+            }
+
+            if (Masini.Count == 0)
+            {
+                lblStatus.Content = "Status: nu există mașini de afișat.";
+            }
         }
 
         private void BtnMeniuAdmin_Click(object sender, RoutedEventArgs e)
@@ -135,7 +204,7 @@ namespace NivelUIWPF
 
             CurataCampuri();
             ReseteazaErori();
-            AfiseazaToateMasinile();
+            IncarcaMasiniInObservableCollection();
             ActualizeazaComboMasini();
 
             lblStatus.Content = "Status: mașina a fost adăugată cu succes.";
@@ -173,7 +242,7 @@ namespace NivelUIWPF
             if (string.IsNullOrWhiteSpace(textCautat))
             {
                 lblMesajCautare.Content = "Introdu un text pentru căutare.";
-                dgMasini.ItemsSource = null;
+                Masini.Clear();
                 lblStatus.Content = "Status: căutare invalidă.";
                 return;
             }
@@ -223,9 +292,7 @@ namespace NivelUIWPF
                 return;
             }
 
-            txtPretModificare.Text = masina.PretPeZi.ToString();
-
-            dpDataInmatriculareModificare.SelectedDate = masina.DataInmatriculare;
+            MasinaSelectata = masina;
 
             rbModDisponibila.IsChecked = masina.Disponibila;
             rbModIndisponibila.IsChecked = !masina.Disponibila;
@@ -243,32 +310,24 @@ namespace NivelUIWPF
 
         private void BtnActualizeaza_Click(object sender, RoutedEventArgs e)
         {
-            if (cmbMasiniModificare.SelectedItem is not Masina masina)
+            if (MasinaSelectata == null)
             {
                 lblStatus.Content = "Status: selectează o mașină pentru modificare.";
                 return;
             }
 
-            if (!decimal.TryParse(txtPretModificare.Text.Trim(), out decimal pretNou) || pretNou <= 0)
-            {
-                lblStatus.Content = "Status: prețul introdus nu este valid.";
-                return;
-            }
+            MasinaSelectata.Disponibila = rbModDisponibila.IsChecked == true;
+            MasinaSelectata.DataActualizare = DateTime.Today;
 
-            masina.PretPeZi = pretNou;
-            masina.Disponibila = rbModDisponibila.IsChecked == true;
-            masina.DataInmatriculare = dpDataInmatriculareModificare.SelectedDate ?? DateTime.Today;
-            masina.DataActualizare = DateTime.Today;
-
-            masina.Dotari = lstDotariModificare.SelectedItems
+            MasinaSelectata.Dotari = lstDotariModificare.SelectedItems
                 .Cast<string>()
                 .ToList();
 
-            bool modificat = adminMasini.ModificaMasina(masina);
+            bool modificat = adminMasini.ModificaMasina(MasinaSelectata);
 
             if (modificat)
             {
-                AfiseazaToateMasinile();
+                IncarcaMasiniInObservableCollection();
                 ActualizeazaComboMasini();
                 lblStatus.Content = "Status: mașina a fost actualizată cu succes.";
             }
@@ -486,29 +545,6 @@ namespace NivelUIWPF
 
             lstTipCarburant.SelectedIndex = 1;
             dpDataInmatriculare.SelectedDate = DateTime.Today;
-        }
-
-        private void AfiseazaToateMasinile()
-        {
-            List<Masina> masini = adminMasini.GetMasini();
-
-            AfiseazaLista(masini);
-
-            lblTitluLista.Content = "Lista tuturor mașinilor";
-            lblStatus.Content = $"Status: {masini.Count} mașini salvate.";
-        }
-
-        private void AfiseazaLista(List<Masina> masini)
-        {
-            dgMasini.ItemsSource = null;
-
-            if (masini.Count == 0)
-            {
-                lblStatus.Content = "Status: nu există mașini de afișat.";
-                return;
-            }
-
-            dgMasini.ItemsSource = masini;
         }
     }
 }

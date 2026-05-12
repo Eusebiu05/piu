@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 
 namespace LibrarieModele
 {
-    public class Masina
+    public class Masina : INotifyPropertyChanged
     {
         private const char SEPARATOR_PRINCIPAL_FISIER = ';';
         private const char SEPARATOR_DOTARI_FISIER = ',';
@@ -21,17 +23,140 @@ namespace LibrarieModele
         private const int DATA_INMATRICULARE = 9;
         private const int DATA_ACTUALIZARE = 10;
 
-        public int IdMasina { get; set; }
-        public string Marca { get; set; } = string.Empty;
-        public string Model { get; set; } = string.Empty;
-        public string NumarInmatriculare { get; set; } = string.Empty;
-        public int AnFabricatie { get; set; }
-        public decimal PretPeZi { get; set; }
-        public bool Disponibila { get; set; } = true;
-        public List<string> Dotari { get; set; } = new List<string>();
-        public string TipCarburant { get; set; } = "Diesel";
-        public DateTime DataInmatriculare { get; set; } = DateTime.Today;
-        public DateTime DataActualizare { get; set; } = DateTime.Today;
+        public event PropertyChangedEventHandler? PropertyChanged;
+
+        protected void OnPropertyChanged([CallerMemberName] string? propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        private int idMasina;
+        public int IdMasina
+        {
+            get => idMasina;
+            set
+            {
+                idMasina = value;
+                OnPropertyChanged();
+                OnPropertyChanged(nameof(DenumireAfisare));
+            }
+        }
+
+        private string marca = string.Empty;
+        public string Marca
+        {
+            get => marca;
+            set
+            {
+                marca = value;
+                OnPropertyChanged();
+                OnPropertyChanged(nameof(DenumireAfisare));
+            }
+        }
+
+        private string model = string.Empty;
+        public string Model
+        {
+            get => model;
+            set
+            {
+                model = value;
+                OnPropertyChanged();
+                OnPropertyChanged(nameof(DenumireAfisare));
+            }
+        }
+
+        private string numarInmatriculare = string.Empty;
+        public string NumarInmatriculare
+        {
+            get => numarInmatriculare;
+            set
+            {
+                numarInmatriculare = value;
+                OnPropertyChanged();
+                OnPropertyChanged(nameof(DenumireAfisare));
+            }
+        }
+
+        private int anFabricatie;
+        public int AnFabricatie
+        {
+            get => anFabricatie;
+            set
+            {
+                anFabricatie = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private decimal pretPeZi;
+        public decimal PretPeZi
+        {
+            get => pretPeZi;
+            set
+            {
+                pretPeZi = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private bool disponibila = true;
+        public bool Disponibila
+        {
+            get => disponibila;
+            set
+            {
+                disponibila = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private List<string> dotari = new List<string>();
+        public List<string> Dotari
+        {
+            get => dotari;
+            set
+            {
+                dotari = value;
+                OnPropertyChanged();
+                OnPropertyChanged(nameof(DotariAfisare));
+            }
+        }
+
+        private string tipCarburant = "Diesel";
+        public string TipCarburant
+        {
+            get => tipCarburant;
+            set
+            {
+                tipCarburant = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private DateTime dataInmatriculare = DateTime.Today;
+        public DateTime DataInmatriculare
+        {
+            get => dataInmatriculare;
+            set
+            {
+                dataInmatriculare = value;
+                OnPropertyChanged();
+                OnPropertyChanged(nameof(DataInmatriculareAfisare));
+            }
+        }
+
+        private DateTime dataActualizare = DateTime.Today;
+        public DateTime DataActualizare
+        {
+            get => dataActualizare;
+            set
+            {
+                dataActualizare = value;
+                OnPropertyChanged();
+                OnPropertyChanged(nameof(DataActualizareAfisare));
+            }
+        }
 
         public string DotariAfisare
         {
