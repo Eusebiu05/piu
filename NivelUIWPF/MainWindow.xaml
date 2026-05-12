@@ -1,0 +1,123 @@
+﻿<Window x:Class="NivelUIWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Închirieri Mașini"
+        Width="1100"
+        Height="650"
+        WindowStartupLocation="CenterScreen"
+        WindowState="Maximized"
+        WindowStyle="SingleBorderWindow"
+        Background="#1E1E2F">
+
+    <Window.Resources>
+        <SolidColorBrush x:Key="CuloareCard" Color="#2D2D44"/>
+        <SolidColorBrush x:Key="CuloareText" Color="#F5F6FA"/>
+        <SolidColorBrush x:Key="CuloareAccent" Color="#F1C40F"/>
+        <SolidColorBrush x:Key="CuloareInput" Color="#3B3B58"/>
+
+        <Style TargetType="Label">
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="Foreground" Value="{StaticResource CuloareText}"/>
+            <Setter Property="Margin" Value="0,6,0,2"/>
+        </Style>
+
+        <Style TargetType="TextBox">
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="Height" Value="32"/>
+            <Setter Property="Padding" Value="8,4"/>
+            <Setter Property="Margin" Value="0,0,0,6"/>
+            <Setter Property="Background" Value="{StaticResource CuloareInput}"/>
+            <Setter Property="Foreground" Value="{StaticResource CuloareText}"/>
+            <Setter Property="BorderBrush" Value="#66668A"/>
+        </Style>
+
+        <Style TargetType="Button">
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Height" Value="38"/>
+            <Setter Property="Margin" Value="0,8,0,0"/>
+            <Setter Property="Background" Value="{StaticResource CuloareAccent}"/>
+            <Setter Property="Foreground" Value="#1E1E2F"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid Margin="40">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="380"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Border Grid.Column="0"
+                Background="{StaticResource CuloareCard}"
+                CornerRadius="20"
+                Padding="30"
+                Margin="0,0,25,0">
+
+            <StackPanel>
+                <Label Content="Adaugă mașină"
+                       FontSize="30"
+                       FontWeight="Bold"
+                       Foreground="{StaticResource CuloareAccent}"
+                       HorizontalContentAlignment="Center"
+                       Margin="0,0,0,20"/>
+
+                <Label Content="Marca"/>
+                <TextBox x:Name="txtMarca"/>
+
+                <Label Content="Model"/>
+                <TextBox x:Name="txtModel"/>
+
+                <Label Content="Număr înmatriculare"/>
+                <TextBox x:Name="txtNumar"/>
+
+                <Label Content="An fabricație"/>
+                <TextBox x:Name="txtAn"/>
+
+                <Label Content="Preț pe zi"/>
+                <TextBox x:Name="txtPret"/>
+
+                <Button Content="Adaugă mașina"
+                        Click="BtnAdauga_Click"/>
+
+                <Button Content="Afișează toate mașinile"
+                        Click="BtnAfiseazaToate_Click"/>
+
+                <Button Content="Afișează mașinile disponibile"
+                        Click="BtnAfiseazaDisponibile_Click"/>
+            </StackPanel>
+        </Border>
+
+        <Border Grid.Column="1"
+                Background="{StaticResource CuloareCard}"
+                CornerRadius="20"
+                Padding="30">
+
+            <StackPanel>
+                <Label x:Name="lblTitluLista"
+                       Content="Lista mașinilor"
+                       FontSize="30"
+                       FontWeight="Bold"
+                       Foreground="{StaticResource CuloareAccent}"
+                       HorizontalContentAlignment="Center"
+                       Margin="0,0,0,20"/>
+
+                <ListBox x:Name="lstMasini"
+                         FontFamily="Segoe UI"
+                         FontSize="16"
+                         Background="#3B3B58"
+                         Foreground="{StaticResource CuloareText}"
+                         BorderBrush="#66668A"
+                         Height="420"/>
+
+                <Label x:Name="lblStatus"
+                       Content="Status: aplicația este pregătită."
+                       FontStyle="Italic"
+                       Foreground="{StaticResource CuloareText}"
+                       Margin="0,15,0,0"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>

@@ -1,26 +1,34 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Proiecte Bussines\\Traduceri Urgente SRL\\LexiSync\\InchirieriMasini\\",
+  "WorkspaceRootPath": "D:\\Proiecte\\piu\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A536421E-5500-4FCC-A5E8-8323E86BDA70}|InchirieriMasini\\InchirieriMasini.csproj|d:\\proiecte bussines\\traduceri urgente srl\\lexisync\\inchirierimasini\\inchirierimasini\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A536421E-5500-4FCC-A5E8-8323E86BDA70}|InchirieriMasini\\InchirieriMasini.csproj|solutionrelative:inchirierimasini\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E3E8518A-C283-4185-B465-316998FECC8C}|NivelUIWPF\\NivelUIWPF.csproj|d:\\proiecte\\piu\\niveluiwpf\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E3E8518A-C283-4185-B465-316998FECC8C}|NivelUIWPF\\NivelUIWPF.csproj|solutionrelative:niveluiwpf\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A536421E-5500-4FCC-A5E8-8323E86BDA70}|InchirieriMasini\\InchirieriMasini.csproj|d:\\proiecte bussines\\traduceri urgente srl\\lexisync\\inchirierimasini\\inchirierimasini\\inchirierimasini.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{A536421E-5500-4FCC-A5E8-8323E86BDA70}|InchirieriMasini\\InchirieriMasini.csproj|solutionrelative:inchirierimasini\\inchirierimasini.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{E3E8518A-C283-4185-B465-316998FECC8C}|NivelUIWPF\\NivelUIWPF.csproj|d:\\proiecte\\piu\\niveluiwpf\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3E8518A-C283-4185-B465-316998FECC8C}|NivelUIWPF\\NivelUIWPF.csproj|solutionrelative:niveluiwpf\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1FF558DA-351D-476E-9EF7-E52082FFB577}|NivelStocareDate\\NivelStocareDate.csproj|d:\\proiecte bussines\\traduceri urgente srl\\lexisync\\inchirierimasini\\nivelstocaredate\\administraremasinifisiertext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1FF558DA-351D-476E-9EF7-E52082FFB577}|NivelStocareDate\\NivelStocareDate.csproj|solutionrelative:nivelstocaredate\\administraremasinifisiertext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0AF72811-BA9F-2BF0-563C-84D023FF6D29}|InchirieriMasini\\InchirieriMasini.csproj|d:\\proiecte\\piu\\inchirierimasini\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0AF72811-BA9F-2BF0-563C-84D023FF6D29}|InchirieriMasini\\InchirieriMasini.csproj|solutionrelative:inchirierimasini\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{68B8BA1A-802C-4C6A-8CE1-E4416E0D55A1}|LibrarieModele\\LibrarieModele.csproj|d:\\proiecte bussines\\traduceri urgente srl\\lexisync\\inchirierimasini\\librariemodele\\masina.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{68B8BA1A-802C-4C6A-8CE1-E4416E0D55A1}|LibrarieModele\\LibrarieModele.csproj|solutionrelative:librariemodele\\masina.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0AF72811-BA9F-2BF0-563C-84D023FF6D29}|InchirieriMasini\\InchirieriMasini.csproj|d:\\proiecte\\piu\\inchirierimasini\\inchirierimasini.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{0AF72811-BA9F-2BF0-563C-84D023FF6D29}|InchirieriMasini\\InchirieriMasini.csproj|solutionrelative:inchirierimasini\\inchirierimasini.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1FF558DA-351D-476E-9EF7-E52082FFB577}|NivelStocareDate\\NivelStocareDate.csproj|d:\\proiecte bussines\\traduceri urgente srl\\lexisync\\inchirierimasini\\nivelstocaredate\\istocaremasini.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1FF558DA-351D-476E-9EF7-E52082FFB577}|NivelStocareDate\\NivelStocareDate.csproj|solutionrelative:nivelstocaredate\\istocaremasini.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{84154139-9197-79E0-F10B-50139B1F5845}|NivelStocareDate\\NivelStocareDate.csproj|d:\\proiecte\\piu\\nivelstocaredate\\administraremasinifisiertext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84154139-9197-79E0-F10B-50139B1F5845}|NivelStocareDate\\NivelStocareDate.csproj|solutionrelative:nivelstocaredate\\administraremasinifisiertext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84154139-9197-79E0-F10B-50139B1F5845}|NivelStocareDate\\NivelStocareDate.csproj|d:\\proiecte\\piu\\nivelstocaredate\\istocaremasini.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84154139-9197-79E0-F10B-50139B1F5845}|NivelStocareDate\\NivelStocareDate.csproj|solutionrelative:nivelstocaredate\\istocaremasini.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0935EEEC-A7CA-CDAF-D191-55122A79B289}|LibrarieModele\\LibrarieModele.csproj|d:\\proiecte\\piu\\librariemodele\\masina.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0935EEEC-A7CA-CDAF-D191-55122A79B289}|LibrarieModele\\LibrarieModele.csproj|solutionrelative:librariemodele\\masina.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,67 +38,88 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "D:\\Proiecte\\piu\\NivelUIWPF\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "NivelUIWPF\\MainWindow.xaml",
+              "ToolTip": "D:\\Proiecte\\piu\\NivelUIWPF\\MainWindow.xaml",
+              "RelativeToolTip": "NivelUIWPF\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-12T19:35:51.71Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "InchirieriMasini",
-              "DocumentMoniker": "D:\\Proiecte Bussines\\Traduceri Urgente SRL\\LexiSync\\InchirieriMasini\\InchirieriMasini\\InchirieriMasini.csproj",
-              "RelativeDocumentMoniker": "InchirieriMasini\\InchirieriMasini.csproj",
-              "ToolTip": "D:\\Proiecte Bussines\\Traduceri Urgente SRL\\LexiSync\\InchirieriMasini\\InchirieriMasini\\InchirieriMasini.csproj",
-              "RelativeToolTip": "InchirieriMasini\\InchirieriMasini.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-05-12T19:12:02.104Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AdministrareMasiniFisierText.cs",
-              "DocumentMoniker": "D:\\Proiecte Bussines\\Traduceri Urgente SRL\\LexiSync\\InchirieriMasini\\NivelStocareDate\\AdministrareMasiniFisierText.cs",
-              "RelativeDocumentMoniker": "NivelStocareDate\\AdministrareMasiniFisierText.cs",
-              "ToolTip": "D:\\Proiecte Bussines\\Traduceri Urgente SRL\\LexiSync\\InchirieriMasini\\NivelStocareDate\\AdministrareMasiniFisierText.cs",
-              "RelativeToolTip": "NivelStocareDate\\AdministrareMasiniFisierText.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAAADEAAAAAAAAAAAAAAA==",
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "D:\\Proiecte\\piu\\NivelUIWPF\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "NivelUIWPF\\MainWindow.xaml.cs",
+              "ToolTip": "D:\\Proiecte\\piu\\NivelUIWPF\\MainWindow.xaml.cs",
+              "RelativeToolTip": "NivelUIWPF\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAAAHQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-12T19:06:23.226Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IStocareMasini.cs",
-              "DocumentMoniker": "D:\\Proiecte Bussines\\Traduceri Urgente SRL\\LexiSync\\InchirieriMasini\\NivelStocareDate\\IStocareMasini.cs",
-              "RelativeDocumentMoniker": "NivelStocareDate\\IStocareMasini.cs",
-              "ToolTip": "D:\\Proiecte Bussines\\Traduceri Urgente SRL\\LexiSync\\InchirieriMasini\\NivelStocareDate\\IStocareMasini.cs",
-              "RelativeToolTip": "NivelStocareDate\\IStocareMasini.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-12T19:01:35.98Z",
+              "WhenOpened": "2026-05-12T19:35:51.473Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Masina.cs",
-              "DocumentMoniker": "D:\\Proiecte Bussines\\Traduceri Urgente SRL\\LexiSync\\InchirieriMasini\\LibrarieModele\\Masina.cs",
-              "RelativeDocumentMoniker": "LibrarieModele\\Masina.cs",
-              "ToolTip": "D:\\Proiecte Bussines\\Traduceri Urgente SRL\\LexiSync\\InchirieriMasini\\LibrarieModele\\Masina.cs",
-              "RelativeToolTip": "LibrarieModele\\Masina.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAAADUAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-12T18:33:57.04Z",
-              "EditorCaption": ""
+              "Title": "InchirieriMasini.csproj",
+              "DocumentMoniker": "D:\\Proiecte\\piu\\InchirieriMasini\\InchirieriMasini.csproj",
+              "RelativeDocumentMoniker": "InchirieriMasini\\InchirieriMasini.csproj",
+              "ToolTip": "D:\\Proiecte\\piu\\InchirieriMasini\\InchirieriMasini.csproj",
+              "RelativeToolTip": "InchirieriMasini\\InchirieriMasini.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-05-12T19:12:02.104Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
+              "Title": "AdministrareMasiniFisierText.cs",
+              "DocumentMoniker": "D:\\Proiecte\\piu\\NivelStocareDate\\AdministrareMasiniFisierText.cs",
+              "RelativeDocumentMoniker": "NivelStocareDate\\AdministrareMasiniFisierText.cs",
+              "ToolTip": "D:\\Proiecte\\piu\\NivelStocareDate\\AdministrareMasiniFisierText.cs",
+              "RelativeToolTip": "NivelStocareDate\\AdministrareMasiniFisierText.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAAADEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T19:06:23.226Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IStocareMasini.cs",
+              "DocumentMoniker": "D:\\Proiecte\\piu\\NivelStocareDate\\IStocareMasini.cs",
+              "RelativeDocumentMoniker": "NivelStocareDate\\IStocareMasini.cs",
+              "ToolTip": "D:\\Proiecte\\piu\\NivelStocareDate\\IStocareMasini.cs",
+              "RelativeToolTip": "NivelStocareDate\\IStocareMasini.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T19:01:35.98Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Masina.cs",
+              "DocumentMoniker": "D:\\Proiecte\\piu\\LibrarieModele\\Masina.cs",
+              "RelativeDocumentMoniker": "LibrarieModele\\Masina.cs",
+              "ToolTip": "D:\\Proiecte\\piu\\LibrarieModele\\Masina.cs",
+              "RelativeToolTip": "LibrarieModele\\Masina.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAAADUAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T18:33:57.04Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Proiecte Bussines\\Traduceri Urgente SRL\\LexiSync\\InchirieriMasini\\InchirieriMasini\\Program.cs",
+              "DocumentMoniker": "D:\\Proiecte\\piu\\InchirieriMasini\\Program.cs",
               "RelativeDocumentMoniker": "InchirieriMasini\\Program.cs",
-              "ToolTip": "D:\\Proiecte Bussines\\Traduceri Urgente SRL\\LexiSync\\InchirieriMasini\\InchirieriMasini\\Program.cs",
+              "ToolTip": "D:\\Proiecte\\piu\\InchirieriMasini\\Program.cs",
               "RelativeToolTip": "InchirieriMasini\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAGIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",

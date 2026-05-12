@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "NivelStocareDate/1.0.0": {
+        "dependencies": {
+          "LibrarieModele": "1.0.0"
+        },
+        "runtime": {
+          "NivelStocareDate.dll": {}
+        }
+      },
+      "LibrarieModele/1.0.0": {
+        "runtime": {
+          "LibrarieModele.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "NivelStocareDate/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "LibrarieModele/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

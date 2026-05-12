@@ -13,3 +13,19 @@ D:\Proiecte Bussines\Traduceri Urgente SRL\LexiSync\InchirieriMasini\NivelStocar
 D:\Proiecte Bussines\Traduceri Urgente SRL\LexiSync\InchirieriMasini\NivelStocareDate\obj\Debug\net7.0\refint\NivelStocareDate.dll
 D:\Proiecte Bussines\Traduceri Urgente SRL\LexiSync\InchirieriMasini\NivelStocareDate\obj\Debug\net7.0\NivelStocareDate.pdb
 D:\Proiecte Bussines\Traduceri Urgente SRL\LexiSync\InchirieriMasini\NivelStocareDate\obj\Debug\net7.0\ref\NivelStocareDate.dll
+D:\Proiecte\piu\NivelStocareDate\bin\Debug\net7.0\NivelStocareDate.deps.json
+D:\Proiecte\piu\NivelStocareDate\bin\Debug\net7.0\NivelStocareDate.dll
+D:\Proiecte\piu\NivelStocareDate\bin\Debug\net7.0\NivelStocareDate.pdb
+D:\Proiecte\piu\NivelStocareDate\bin\Debug\net7.0\LibrarieModele.dll
+D:\Proiecte\piu\NivelStocareDate\bin\Debug\net7.0\LibrarieModele.pdb
+D:\Proiecte\piu\NivelStocareDate\obj\Debug\net7.0\NivelStocareDate.csproj.AssemblyReference.cache
+D:\Proiecte\piu\NivelStocareDate\obj\Debug\net7.0\NivelStocareDate.GeneratedMSBuildEditorConfig.editorconfig
+D:\Proiecte\piu\NivelStocareDate\obj\Debug\net7.0\NivelStocareDate.AssemblyInfoInputs.cache
+D:\Proiecte\piu\NivelStocareDate\obj\Debug\net7.0\NivelStocareDate.AssemblyInfo.cs
+D:\Proiecte\piu\NivelStocareDate\obj\Debug\net7.0\NivelStocareDate.csproj.CoreCompileInputs.cache
+D:\Proiecte\piu\NivelStocareDate\obj\Debug\net7.0\NivelStocareDate.sourcelink.json
+D:\Proiecte\piu\NivelStocareDate\obj\Debug\net7.0\NivelSto.ECC26E05.Up2Date
+D:\Proiecte\piu\NivelStocareDate\obj\Debug\net7.0\NivelStocareDate.dll
+D:\Proiecte\piu\NivelStocareDate\obj\Debug\net7.0\refint\NivelStocareDate.dll
+D:\Proiecte\piu\NivelStocareDate\obj\Debug\net7.0\NivelStocareDate.pdb
+D:\Proiecte\piu\NivelStocareDate\obj\Debug\net7.0\ref\NivelStocareDate.dll

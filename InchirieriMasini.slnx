@@ -2,4 +2,5 @@
   <Project Path="InchirieriMasini/InchirieriMasini.csproj" />
   <Project Path="LibrarieModele/LibrarieModele.csproj" />
   <Project Path="NivelStocareDate/NivelStocareDate.csproj" />
+  <Project Path="NivelUIWPF/NivelUIWPF.csproj" Id="e3e8518a-c283-4185-b465-316998fecc8c" />
 </Solution>

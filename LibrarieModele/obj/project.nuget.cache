@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "aEAjBHf3KH8=",
+  "dgSpecHash": "6PwBLlIVbL4=",
   "success": true,
-  "projectFilePath": "D:\\Proiecte Bussines\\Traduceri Urgente SRL\\LexiSync\\InchirieriMasini\\LibrarieModele\\LibrarieModele.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "D:\\Proiecte\\piu\\LibrarieModele\\LibrarieModele.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Work\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.24\\microsoft.windowsdesktop.app.ref.8.0.24.nupkg.sha512",
+    "C:\\Users\\Work\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.24\\microsoft.netcore.app.ref.8.0.24.nupkg.sha512",
+    "C:\\Users\\Work\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.24\\microsoft.aspnetcore.app.ref.8.0.24.nupkg.sha512"
+  ],
   "logs": []
 }

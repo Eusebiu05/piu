@@ -1,0 +1,12 @@
+D:\Proiecte\piu\LibrarieModele\bin\Debug\net8.0\LibrarieModele.deps.json
+D:\Proiecte\piu\LibrarieModele\bin\Debug\net8.0\LibrarieModele.dll
+D:\Proiecte\piu\LibrarieModele\bin\Debug\net8.0\LibrarieModele.pdb
+D:\Proiecte\piu\LibrarieModele\obj\Debug\net8.0\LibrarieModele.GeneratedMSBuildEditorConfig.editorconfig
+D:\Proiecte\piu\LibrarieModele\obj\Debug\net8.0\LibrarieModele.AssemblyInfoInputs.cache
+D:\Proiecte\piu\LibrarieModele\obj\Debug\net8.0\LibrarieModele.AssemblyInfo.cs
+D:\Proiecte\piu\LibrarieModele\obj\Debug\net8.0\LibrarieModele.csproj.CoreCompileInputs.cache
+D:\Proiecte\piu\LibrarieModele\obj\Debug\net8.0\LibrarieModele.sourcelink.json
+D:\Proiecte\piu\LibrarieModele\obj\Debug\net8.0\LibrarieModele.dll
+D:\Proiecte\piu\LibrarieModele\obj\Debug\net8.0\refint\LibrarieModele.dll
+D:\Proiecte\piu\LibrarieModele\obj\Debug\net8.0\LibrarieModele.pdb
+D:\Proiecte\piu\LibrarieModele\obj\Debug\net8.0\ref\LibrarieModele.dll

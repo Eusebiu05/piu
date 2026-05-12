@@ -1,10 +1,10 @@
 {
   "version": 3,
   "targets": {
-    "net7.0": {
+    "net8.0": {
       "LibrarieModele/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v7.0",
+        "framework": ".NETCoreApp,Version=v8.0",
         "compile": {
           "bin/placeholder/LibrarieModele.dll": {}
         },
@@ -22,7 +22,7 @@
     }
   },
   "projectFileDependencyGroups": {
-    "net7.0": [
+    "net8.0": [
       "LibrarieModele >= 1.0.0"
     ]
   },
@@ -33,11 +33,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Proiecte Bussines\\Traduceri Urgente SRL\\LexiSync\\InchirieriMasini\\NivelStocareDate\\NivelStocareDate.csproj",
+      "projectUniqueName": "D:\\Proiecte\\piu\\NivelStocareDate\\NivelStocareDate.csproj",
       "projectName": "NivelStocareDate",
-      "projectPath": "D:\\Proiecte Bussines\\Traduceri Urgente SRL\\LexiSync\\InchirieriMasini\\NivelStocareDate\\NivelStocareDate.csproj",
+      "projectPath": "D:\\Proiecte\\piu\\NivelStocareDate\\NivelStocareDate.csproj",
       "packagesPath": "C:\\Users\\Work\\.nuget\\packages\\",
-      "outputPath": "D:\\Proiecte Bussines\\Traduceri Urgente SRL\\LexiSync\\InchirieriMasini\\NivelStocareDate\\obj\\",
+      "outputPath": "D:\\Proiecte\\piu\\NivelStocareDate\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -48,18 +48,18 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net7.0"
+        "net8.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net7.0": {
-          "targetAlias": "net7.0",
+        "net8.0": {
+          "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\Proiecte Bussines\\Traduceri Urgente SRL\\LexiSync\\InchirieriMasini\\LibrarieModele\\LibrarieModele.csproj": {
-              "projectPath": "D:\\Proiecte Bussines\\Traduceri Urgente SRL\\LexiSync\\InchirieriMasini\\LibrarieModele\\LibrarieModele.csproj"
+            "D:\\Proiecte\\piu\\LibrarieModele\\LibrarieModele.csproj": {
+              "projectPath": "D:\\Proiecte\\piu\\LibrarieModele\\LibrarieModele.csproj"
             }
           }
         }
@@ -77,8 +77,8 @@
       "SdkAnalysisLevel": "10.0.100"
     },
     "frameworks": {
-      "net7.0": {
-        "targetAlias": "net7.0",
+      "net8.0": {
+        "targetAlias": "net8.0",
         "imports": [
           "net461",
           "net462",
@@ -90,12 +90,26 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[8.0.24, 8.0.24]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[8.0.24, 8.0.24]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[8.0.24, 8.0.24]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

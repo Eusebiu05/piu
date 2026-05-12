@@ -18,3 +18,24 @@ D:\Proiecte Bussines\Traduceri Urgente SRL\LexiSync\InchirieriMasini\InchirieriM
 D:\Proiecte Bussines\Traduceri Urgente SRL\LexiSync\InchirieriMasini\InchirieriMasini\bin\Debug\net7.0\NivelStocareDate.pdb
 D:\Proiecte Bussines\Traduceri Urgente SRL\LexiSync\InchirieriMasini\InchirieriMasini\obj\Debug\net7.0\InchirieriMasini.csproj.AssemblyReference.cache
 D:\Proiecte Bussines\Traduceri Urgente SRL\LexiSync\InchirieriMasini\InchirieriMasini\obj\Debug\net7.0\Inchirie.337DA3E8.Up2Date
+D:\Proiecte\piu\InchirieriMasini\bin\Debug\net7.0\InchirieriMasini.exe
+D:\Proiecte\piu\InchirieriMasini\bin\Debug\net7.0\InchirieriMasini.deps.json
+D:\Proiecte\piu\InchirieriMasini\bin\Debug\net7.0\InchirieriMasini.runtimeconfig.json
+D:\Proiecte\piu\InchirieriMasini\bin\Debug\net7.0\InchirieriMasini.dll
+D:\Proiecte\piu\InchirieriMasini\bin\Debug\net7.0\InchirieriMasini.pdb
+D:\Proiecte\piu\InchirieriMasini\bin\Debug\net7.0\LibrarieModele.dll
+D:\Proiecte\piu\InchirieriMasini\bin\Debug\net7.0\NivelStocareDate.dll
+D:\Proiecte\piu\InchirieriMasini\bin\Debug\net7.0\LibrarieModele.pdb
+D:\Proiecte\piu\InchirieriMasini\bin\Debug\net7.0\NivelStocareDate.pdb
+D:\Proiecte\piu\InchirieriMasini\obj\Debug\net7.0\InchirieriMasini.csproj.AssemblyReference.cache
+D:\Proiecte\piu\InchirieriMasini\obj\Debug\net7.0\InchirieriMasini.GeneratedMSBuildEditorConfig.editorconfig
+D:\Proiecte\piu\InchirieriMasini\obj\Debug\net7.0\InchirieriMasini.AssemblyInfoInputs.cache
+D:\Proiecte\piu\InchirieriMasini\obj\Debug\net7.0\InchirieriMasini.AssemblyInfo.cs
+D:\Proiecte\piu\InchirieriMasini\obj\Debug\net7.0\InchirieriMasini.csproj.CoreCompileInputs.cache
+D:\Proiecte\piu\InchirieriMasini\obj\Debug\net7.0\InchirieriMasini.sourcelink.json
+D:\Proiecte\piu\InchirieriMasini\obj\Debug\net7.0\Inchirie.337DA3E8.Up2Date
+D:\Proiecte\piu\InchirieriMasini\obj\Debug\net7.0\InchirieriMasini.dll
+D:\Proiecte\piu\InchirieriMasini\obj\Debug\net7.0\refint\InchirieriMasini.dll
+D:\Proiecte\piu\InchirieriMasini\obj\Debug\net7.0\InchirieriMasini.pdb
+D:\Proiecte\piu\InchirieriMasini\obj\Debug\net7.0\InchirieriMasini.genruntimeconfig.cache
+D:\Proiecte\piu\InchirieriMasini\obj\Debug\net7.0\ref\InchirieriMasini.dll

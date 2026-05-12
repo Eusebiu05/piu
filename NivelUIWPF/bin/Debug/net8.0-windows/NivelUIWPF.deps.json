@@ -1,0 +1,56 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "NivelUIWPF/1.0.0": {
+        "dependencies": {
+          "LibrarieModele": "1.0.0",
+          "NivelStocareDate": "1.0.0"
+        },
+        "runtime": {
+          "NivelUIWPF.dll": {}
+        }
+      },
+      "LibrarieModele/1.0.0": {
+        "runtime": {
+          "LibrarieModele.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "NivelStocareDate/1.0.0": {
+        "dependencies": {
+          "LibrarieModele": "1.0.0"
+        },
+        "runtime": {
+          "NivelStocareDate.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "NivelUIWPF/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "LibrarieModele/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "NivelStocareDate/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
